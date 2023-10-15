@@ -18,16 +18,16 @@ namespace Lecture_1_1
             Console.WriteLine("Please enter your second number:");
             int number2 = Convert.ToInt32(Console.ReadLine());
 
-            int result = number1/number2;
+            int result = number1 / number2;
 
             Console.WriteLine($"Result: {result}");
 
             int[] number = new int[3];
             for (int i = 0; i < number.Length; i++)
             {
-                Console.WriteLine($"{i+1}:{number[i]}");
+                Console.WriteLine($"{i + 1}:{number[i]}");
             }
-           
+
         }
 
     }
