@@ -52,3 +52,11 @@ class Person
 
     public int Age { get; set; }
 }
+
+//Stack ve Heap için karşılaştırmalar
+//=> Stack mi daha hızlı çalışır heap mi ? => Stack daha hızlı çalışır, her zaman daha performanslıdır
+//=> Const nerede saklanır, neden ? => Const heap'te saklanır sebebi de şudur : Const sabit olarak bir kere tanımlanır.
+//Daha sonrasında sürekli olarak ona  ulaşıp o değeri kullanması gerekecektir. Fakat stack'te üst üste gelip bir alta geçtiği için
+//kolay bir şekilde ona ulaşamayacaktır. Bu nedenle heap'i tercih eder.
+//=> Heap'te değer değişkenler bulunuyor.int,guid,bool,char... bulunuyor.
+//Referans değişkenlerde ise string,class,object,interface.
