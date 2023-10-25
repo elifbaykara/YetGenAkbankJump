@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Lecture_4_1.Domain.Abstract
 {
-    internal interface ISaveable
+    public interface ISaveable
     {
+        string GetInfo();
     }
 }

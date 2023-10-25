@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lecture_4_1.Domain.Common
 {
-    internal class EntityBase
+    public class EntityBase<TKey>
     {
+        public TKey Id { get; set; }
+        public DateTimeOffset CreatedOn { get; set; }
     }
 }
