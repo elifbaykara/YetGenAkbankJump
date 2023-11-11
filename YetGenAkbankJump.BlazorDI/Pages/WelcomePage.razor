@@ -1,0 +1,19 @@
+﻿@using Blazored.Toast.Services;
+@using YetGenAkbankJump.BlazorDI.Services;
+@inject IToasterService toastService
+
+@page "/welcome-page"
+
+<h3>WelcomePage</h3>
+
+
+
+@code
+{
+    protected override void OnAfterRender(bool firstRender)
+    {
+        toastService.ShowWarning("Welcome!");
+
+        base.OnAfterRender(firstRender);
+    }
+}

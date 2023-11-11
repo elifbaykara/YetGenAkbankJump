@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lecture_4_2.Utilities
 {
+
     public class PasswordGenerator
     {
+        public int GeneratedPasswordsCount { get; set; }
+
         private readonly Random _random;
         private const string Numbers = "0123456789";
         private const string SpecialChars = "!?_-*+";
@@ -22,15 +25,15 @@ namespace Lecture_4_2.Utilities
         {
             var charsBuilder = new StringBuilder(); //string inşası yapmamızı sağlıyor. buraya string password verirsek milyonlarca kişi için sürekli değişken vermiş oluruz çok büyük bir performans kaybı. Bu nedenle stringBuilder kullanıyoruz.
 
-            if(includeNumbers)
+            if (includeNumbers)
             {
                 charsBuilder.Append(Numbers);
             }
-            if(includeLowerCase)
+            if (includeLowerCase)
             {
                 charsBuilder.Append(LowerCaseChars);
             }
-            if(includeUpperCase) 
+            if (includeUpperCase)
             {
                 charsBuilder.Append(UpperCaseChars);
             }
@@ -47,7 +50,11 @@ namespace Lecture_4_2.Utilities
                 var randomIndex = _random.Next(0, acceptedChars.Length);
                 passwordBuilder.Append(acceptedChars[randomIndex]);
             }
+
+            GeneratedPasswordsCount++;
             return passwordBuilder.ToString(); //return password yerine bunu yazdık.
         }
+
+
     }
 }

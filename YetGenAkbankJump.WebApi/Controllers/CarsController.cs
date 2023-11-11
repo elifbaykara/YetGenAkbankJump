@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using System.Reflection.Metadata.Ecma335;
+using YetGenAkbankJump.Shared.Helpers;
 using YetGenAkbankJump.WebApi.Data;
 
 namespace YetGenAkbankJump.WebApi.Controllers
@@ -10,18 +12,31 @@ namespace YetGenAkbankJump.WebApi.Controllers
     [ApiController]
     public class CarsController : ControllerBase
     {
+        private readonly IStringLocalizer<CommonTranslations> _localizer;
+
+        public CarsController(IStringLocalizer<CommonTranslations> localizer)
+        {
+            _localizer = localizer;
+        }
+
         [HttpGet]
-        public IActionResult GetAll() 
+        public IActionResult GetAll()
         {
             var cars = CarsContext.LuxuryCars.ToList();
-            return Ok (cars);
+            return Ok(cars);
+        }
+
+        [HttpGet("WelcomeMessage")]
+        public IActionResult WelcomeMessage() 
+        {
+            return Ok(_localizer["WelcomeMessage"]);
         }
 
         [HttpGet("{id:guid}")]
         public IActionResult GetById(Guid id)
         {
             if(id == Guid.Empty)
-                return BadRequest("Id cannot be empty"); //400
+                return BadRequest(_localizer["IdCannotBeNull"]); //400
 
             var car = CarsContext.LuxuryCars.FirstOrDefault(x => x.Id == id);
 
