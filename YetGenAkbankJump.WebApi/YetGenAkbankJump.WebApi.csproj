@@ -4,15 +4,20 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>609417ee-f31a-433b-8740-44d1bd342f93</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
     <PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.13" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Persistence\YetGenAkbankJump.Persistence\YetGenAkbankJump.Persistence.csproj" />
+    <ProjectReference Include="..\YetGenAkbankJump.BlazorDI\YetGenAkbankJump.BlazorDI.csproj" />
     <ProjectReference Include="..\YetGenAkbankJump.Domain\YetGenAkbankJump.Domain.csproj" />
     <ProjectReference Include="..\YetGenAkbankJump.Shared\YetGenAkbankJump.Shared.csproj" />
   </ItemGroup>

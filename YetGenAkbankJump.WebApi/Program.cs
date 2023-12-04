@@ -1,7 +1,12 @@
 using Lecture_4_2.Utilities;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System.Globalization;
+using YetGenAkbankJump.Persistence.Contexts;
+using YetGenAkbankJump.Shared.Services;
 using YetGenAkbankJump.Shared.Utilities;
+using YetGenAkbankJump.WebApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,11 +15,19 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<PasswordGenerator>(new PasswordGenerator());  //singleton=> eklediðim servisin sadece bir kopyasý olabilir birisi ona ihtiyaç duyarsa sen ona bu kopyayý döndür.
+builder.Services.AddSingleton<PasswordGenerator>();  //singleton=> eklediðim servisin sadece bir kopyasý olabilir birisi ona ihtiyaç duyarsa sen ona bu kopyayý döndür.
+
 builder.Services.AddSingleton<RequestCountService>(new RequestCountService()); //uygulamanýn her yerindeki passwordleri almak için
- 
+
+var textPath = builder.Configuration.GetSection("TextPath").Value;
+
+builder.Services.AddSingleton<IIPService, IPService>();
+
+builder.Services.AddSingleton<ITextService, TextService>(x => new TextService(textPath));
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -24,6 +37,10 @@ builder.Services.AddCors(options =>
             .SetIsOriginAllowed((host) => true)
             .AllowAnyHeader());
 });
+
+var connectionString = builder.Configuration.GetSection("YetGenPostgreSQLDB").Value;
+
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
 
 builder.Services.AddLocalization(options =>
 {

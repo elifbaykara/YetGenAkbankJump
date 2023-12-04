@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YetGenAkbankJump.Shared.Services;
 
 namespace Lecture_4_2.Utilities
 {
 
     public class PasswordGenerator
     {
+
+        private readonly ITextService _textService;
+        private readonly IIPService _ipService;
         public int GeneratedPasswordsCount { get; set; }
+
+        private string _lastIp = string.Empty;
 
         private readonly Random _random;
         private const string Numbers = "0123456789";
@@ -17,9 +23,11 @@ namespace Lecture_4_2.Utilities
         private const string LowerCaseChars = "abcdefghijklmnoprstuvwxyz";
         private const string UpperCaseChars = "ABCDEFGHIJKLMNOPRSTUVWXYZ";
 
-        public PasswordGenerator()
+        public PasswordGenerator(IIPService ipService, ITextService textService)
         {
             _random = new Random();
+            _ipService = ipService;
+            _textService = textService;
         }
         public string Generate(int passwordLength, bool includeNumbers, bool includeLowerCase, bool includeUpperCase, bool includeSpeacialChars)
         {
@@ -52,7 +60,14 @@ namespace Lecture_4_2.Utilities
             }
 
             GeneratedPasswordsCount++;
-            return passwordBuilder.ToString(); //return password yerine bunu yazdık.
+
+            var password = passwordBuilder.ToString();
+
+            _textService.Save(password);
+
+            _lastIp = _ipService.Ip;
+           
+            return password;
         }
 
 

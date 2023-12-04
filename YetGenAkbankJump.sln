@@ -93,7 +93,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture_7.API", "Lecture_7.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lecture_9_1", "Lecture_9_1", "{6B140AFD-8ACC-411B-9ACB-559B67F51266}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetGenAkbankJump.BlazorDI", "YetGenAkbankJump.BlazorDI\YetGenAkbankJump.BlazorDI.csproj", "{749FBA8F-5E41-463F-A871-788C54AAB96C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetGenAkbankJump.BlazorDI", "YetGenAkbankJump.BlazorDI\YetGenAkbankJump.BlazorDI.csproj", "{749FBA8F-5E41-463F-A871-788C54AAB96C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetGenAkbankJump.Persistence", "Persistence\YetGenAkbankJump.Persistence\YetGenAkbankJump.Persistence.csproj", "{96C45BBD-CD34-47AA-BFEF-7A10C0863C92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FC1F1889-14FE-4CF4-8569-45D0A1FF90F2}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -205,6 +212,10 @@ Global
 		{749FBA8F-5E41-463F-A871-788C54AAB96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{749FBA8F-5E41-463F-A871-788C54AAB96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{749FBA8F-5E41-463F-A871-788C54AAB96C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96C45BBD-CD34-47AA-BFEF-7A10C0863C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96C45BBD-CD34-47AA-BFEF-7A10C0863C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96C45BBD-CD34-47AA-BFEF-7A10C0863C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96C45BBD-CD34-47AA-BFEF-7A10C0863C92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
