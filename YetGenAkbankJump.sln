@@ -5,8 +5,6 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture_1_2", "Lecture_1_2\Lecture_1_2.csproj", "{43234D84-A80E-4B6A-8439-5E14DE30D462}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture_1_1", "Lecture_1_1\Lecture_1_1.csproj", "{7AD337CF-972E-4285-973A-FFBCC73B9951}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LiveLectures", "LiveLectures", "{047C2AB1-1D4B-4123-AEFF-2DEA01CB2D3B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture_2_1", "Lecture_2_1\Lecture_2_1.csproj", "{E31566DC-D75E-46B7-8281-AA5FA623AA54}"
@@ -40,8 +38,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week4", "Week4\Week4.csproj", "{E1308872-B9AC-406B-9E10-690FFD98DAA5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week6", "Week6\Week6.csproj", "{821A028D-01B0-486D-B6D6-6087D7701582}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetGenAkbankJump.BlazorClient", "YetGenAkbankJump.BlazorClient\YetGenAkbankJump.BlazorClient.csproj", "{0505713D-1C9A-4480-97BB-3378A8046C95}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lecture_4_1", "Lecture_4_1", "{793CE004-7A8E-4274-B749-82B228C111EA}"
 EndProject
@@ -93,14 +89,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture_7.API", "Lecture_7.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lecture_9_1", "Lecture_9_1", "{6B140AFD-8ACC-411B-9ACB-559B67F51266}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetGenAkbankJump.BlazorDI", "YetGenAkbankJump.BlazorDI\YetGenAkbankJump.BlazorDI.csproj", "{749FBA8F-5E41-463F-A871-788C54AAB96C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetGenAkbankJump.Persistence", "Persistence\YetGenAkbankJump.Persistence\YetGenAkbankJump.Persistence.csproj", "{96C45BBD-CD34-47AA-BFEF-7A10C0863C92}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FC1F1889-14FE-4CF4-8569-45D0A1FF90F2}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetGenAkbankJump.Persistence", "Persistence\YetGenAkbankJump.Persistence\YetGenAkbankJump.Persistence.csproj", "{96C45BBD-CD34-47AA-BFEF-7A10C0863C92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -112,10 +101,6 @@ Global
 		{43234D84-A80E-4B6A-8439-5E14DE30D462}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43234D84-A80E-4B6A-8439-5E14DE30D462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43234D84-A80E-4B6A-8439-5E14DE30D462}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7AD337CF-972E-4285-973A-FFBCC73B9951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7AD337CF-972E-4285-973A-FFBCC73B9951}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7AD337CF-972E-4285-973A-FFBCC73B9951}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7AD337CF-972E-4285-973A-FFBCC73B9951}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E31566DC-D75E-46B7-8281-AA5FA623AA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E31566DC-D75E-46B7-8281-AA5FA623AA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E31566DC-D75E-46B7-8281-AA5FA623AA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -176,10 +161,6 @@ Global
 		{821A028D-01B0-486D-B6D6-6087D7701582}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{821A028D-01B0-486D-B6D6-6087D7701582}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{821A028D-01B0-486D-B6D6-6087D7701582}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0505713D-1C9A-4480-97BB-3378A8046C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0505713D-1C9A-4480-97BB-3378A8046C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0505713D-1C9A-4480-97BB-3378A8046C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0505713D-1C9A-4480-97BB-3378A8046C95}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7E65101F-8B34-48B3-A57D-B242C586318F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E65101F-8B34-48B3-A57D-B242C586318F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E65101F-8B34-48B3-A57D-B242C586318F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -208,10 +189,6 @@ Global
 		{23EAFCA8-8294-4851-BE29-9FEEAA79290C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23EAFCA8-8294-4851-BE29-9FEEAA79290C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23EAFCA8-8294-4851-BE29-9FEEAA79290C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{749FBA8F-5E41-463F-A871-788C54AAB96C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{749FBA8F-5E41-463F-A871-788C54AAB96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{749FBA8F-5E41-463F-A871-788C54AAB96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{749FBA8F-5E41-463F-A871-788C54AAB96C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{96C45BBD-CD34-47AA-BFEF-7A10C0863C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96C45BBD-CD34-47AA-BFEF-7A10C0863C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96C45BBD-CD34-47AA-BFEF-7A10C0863C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -222,7 +199,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{43234D84-A80E-4B6A-8439-5E14DE30D462} = {C46CDAED-6CA3-4452-830C-00276737D488}
-		{7AD337CF-972E-4285-973A-FFBCC73B9951} = {8EBD4BA0-A9BE-4001-BABE-70117E162B0C}
 		{E31566DC-D75E-46B7-8281-AA5FA623AA54} = {3E63CF9F-BF7F-4B1B-B0C8-B9275DDEEB25}
 		{41D9525A-E14C-4EED-BB50-EB97BC28560E} = {CDE2E9EB-A6B8-43F8-9E07-82A3265C43F3}
 		{0C10DF2C-5925-4EA0-A8F3-8A11C5705160} = {C2DA93EA-45E6-4233-9E37-0FACC7ECF0C9}

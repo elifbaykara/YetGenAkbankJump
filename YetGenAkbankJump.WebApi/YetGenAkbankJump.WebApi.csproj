@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Core\Domain\Lecture_4_1.Domain.csproj" />
     <ProjectReference Include="..\Persistence\YetGenAkbankJump.Persistence\YetGenAkbankJump.Persistence.csproj" />
-    <ProjectReference Include="..\YetGenAkbankJump.BlazorDI\YetGenAkbankJump.BlazorDI.csproj" />
     <ProjectReference Include="..\YetGenAkbankJump.Domain\YetGenAkbankJump.Domain.csproj" />
     <ProjectReference Include="..\YetGenAkbankJump.Shared\YetGenAkbankJump.Shared.csproj" />
   </ItemGroup>
