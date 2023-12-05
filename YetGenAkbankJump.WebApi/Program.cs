@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Globalization;
+using System.Text.Json.Serialization;
 using YetGenAkbankJump.Persistence.Contexts;
 using YetGenAkbankJump.Shared.Services;
 using YetGenAkbankJump.Shared.Utilities;
@@ -12,7 +13,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(opt =>
+    {
+        opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles; 
+    });
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
@@ -40,7 +46,7 @@ builder.Services.AddCors(options =>
 
 var connectionString = builder.Configuration.GetSection("YetGenPostgreSQLDB").Value;
 
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
+builder.Services.AddDbContext<YetGenIdentityDbContext>(options => options.UseNpgsql(connectionString));
 
 builder.Services.AddLocalization(options =>
 {

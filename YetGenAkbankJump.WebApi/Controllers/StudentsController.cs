@@ -12,12 +12,12 @@ namespace YetGenAkbankJump.WebApi.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly FakeDataService _fakeDataService;
-        private readonly ApplicationDbContext _applicationDbContext;
+        private readonly YetGenIdentityDbContext _applicationDbContext;
         private readonly IMemoryCache _memoryCache;
         private readonly MemoryCacheEntryOptions _cacheEntryOptions;
         private const string StudentsCacheKey = "studentsList";
 
-        public StudentsController(FakeDataService fakeDataService, ApplicationDbContext applicationDbContext, IMemoryCache memoryCache)
+        public StudentsController(FakeDataService fakeDataService, YetGenIdentityDbContext applicationDbContext, IMemoryCache memoryCache)
         {
             _fakeDataService = fakeDataService;
             _applicationDbContext = applicationDbContext;

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Lecture_1_1\Lecture_1_1.csproj" />
+    <ProjectReference Include="..\YetGenAkbankJump.Domain\YetGenAkbankJump.Domain.csproj" />
     <ProjectReference Include="..\YetGenAkbankJump.Shared\YetGenAkbankJump.Shared.csproj" />
   </ItemGroup>
 
