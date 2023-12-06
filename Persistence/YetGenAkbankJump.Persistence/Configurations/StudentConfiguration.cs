@@ -41,7 +41,6 @@ namespace YetGenAkbankJump.Persistence.Configurations
 
             //age
             builder.Property(x => x.Age).IsRequired();
-            builder.Property(x => x.Age).HasColumnType("smallint");
             builder.Property(x => x.Age).HasConversion<int>();
 
             //registrationfee

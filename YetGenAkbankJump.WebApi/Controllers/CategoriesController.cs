@@ -11,9 +11,9 @@ namespace YetGenAkbankJump.WebApi.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly YetGenIdentityDbContext _applicationDbContext;
+        private readonly ApplicationDbContext _applicationDbContext;
 
-        public CategoriesController(YetGenIdentityDbContext applicationDbContext)
+        public CategoriesController(ApplicationDbContext applicationDbContext)
         {
             _applicationDbContext = applicationDbContext;
         }

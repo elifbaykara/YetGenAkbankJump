@@ -11,9 +11,9 @@ namespace YetGenAkbankJump.WebApi.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly YetGenIdentityDbContext _applicationDbContext;
+        private readonly ApplicationDbContext _applicationDbContext;
 
-        public ProductsController(YetGenIdentityDbContext applicationDbContext)
+        public ProductsController(ApplicationDbContext applicationDbContext)
         {
             _applicationDbContext = applicationDbContext;
         }

@@ -30,5 +30,7 @@ namespace YetGenAkbankJump.Persistence.Configurations.Identity
 
             builder.ToTable("UserSettings");
         }
+
+    
     }
 }

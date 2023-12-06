@@ -6,10 +6,10 @@ namespace YetGenAkbankJump.WebApi.Services
 {
     public class FakeDataService
     {
-        private readonly YetGenIdentityDbContext _applicationDbContext;
+        private readonly ApplicationDbContext _applicationDbContext;
         private readonly Random _random;
 
-        public FakeDataService(YetGenIdentityDbContext applicationDbContext)
+        public FakeDataService(ApplicationDbContext applicationDbContext)
         {
             _applicationDbContext = applicationDbContext;
 

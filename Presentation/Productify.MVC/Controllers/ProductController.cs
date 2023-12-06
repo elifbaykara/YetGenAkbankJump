@@ -19,8 +19,19 @@ namespace Productify.MVC.Controllers
             return View(context.Products.ToList());
         }
 
+        [HttpGet]
         public IActionResult AddProduct()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddProduct(string productName)
+        {
+            context.Products.Add(new(productName));
+
+            context.SaveChanges();
+
             return View();
         }
     }

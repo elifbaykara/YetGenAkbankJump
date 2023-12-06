@@ -46,7 +46,10 @@ builder.Services.AddCors(options =>
 
 var connectionString = builder.Configuration.GetSection("YetGenPostgreSQLDB").Value;
 
-builder.Services.AddDbContext<YetGenIdentityDbContext>(options => options.UseNpgsql(connectionString));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseNpgsql(connectionString);
+});
 
 builder.Services.AddLocalization(options =>
 {
